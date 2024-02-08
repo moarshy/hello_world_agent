@@ -1,4 +1,4 @@
-from hello_world_daimon_template.schema import InputSchema
+from hello_world_daimon_template.schemas import InputSchema
 from hello_world_daimon_template.utils import get_logger
 
 
