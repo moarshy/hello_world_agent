@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class JobRequestSchema(BaseModel):
+class InputSchema(BaseModel):
     name: str
     description: str
     param1: int
