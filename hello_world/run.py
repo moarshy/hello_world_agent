@@ -1,5 +1,5 @@
-from hello_world_daimon_template.schemas import InputSchema
-from hello_world_daimon_template.utils import get_logger
+from hello_world.schemas import InputSchema
+from hello_world.utils import get_logger
 
 
 logger = get_logger(__name__)

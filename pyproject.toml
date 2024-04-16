@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "hello-world-daimon-template"
+name = "hello-world"
 version = "0.1.0"
 description = ""
 authors = ["moarshy <marshath@gmail.com>"]
 readme = "README.md"
 packages = [
-    { include = "hello_world_daimon_template", from = "." },
+    { include = "hello_world", from = "." },
 ]
 
 [tool.poetry.dependencies]
