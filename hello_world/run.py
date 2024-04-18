@@ -5,9 +5,9 @@ from hello_world.utils import get_logger
 logger = get_logger(__name__)
 
 
-def run(job: InputSchema, **kwargs) -> int:
+def run(job: InputSchema, cfg: dict = None, **kwargs):
     logger.info(f"Running job {job.name}")
-    logger.info(f"Params: {kwargs.get('cfg', {})}")
+    logger.info(f"cfg: {cfg}")
     return job.param1 + job.param2
 
 
