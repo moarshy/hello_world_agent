@@ -1,9 +1,23 @@
+name: hello_world
+author: naptha
+version: 0.1.0
+description: A tool for saying hello.
+license: MIT
+
+models:
+  default_model_provider: ollama
+  ollama: 
+    model: ollama/phi
+    max_tokens: 1000
+    temperature: 0
+    api_base: http://localhost:11434
+
 inputs:
     save: false
     location: ipfs
 
 outputs:
-    save: true
+    save: false
     location: node
 
 implementation:
