@@ -1,7 +1,7 @@
-name: hello_world
+name: hello_world_agent
 author: naptha
 version: 0.1.0
-description: A tool for saying hello.
+description: An agent for saying hello.
 license: MIT
 
 models:
