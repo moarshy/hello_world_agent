@@ -2,14 +2,15 @@
 
 import logging
 from hello_world_agent.schemas import InputSchema
+from naptha_sdk.schemas import AgentRunInput
 
 
 logger = logging.getLogger(__name__)
 
 
-def run(inputs: InputSchema, *args, **kwargs):
-    logger.info(f"Running module with inputs {inputs}")
-    return f"Hello {inputs.firstname} {inputs.surname}"
+def run(agent_run: AgentRunInput, *args, **kwargs):
+    logger.info(f"Running module with inputs {agent_run}")
+    return f"Hello {agent_run.inputs.firstname} {agent_run.inputs.surname}"
 
 if __name__ == "__main__":
     inputs = InputSchema(
