@@ -3,6 +3,8 @@
         "name": "agent_deployment_1",
         "module": {"name": "hello_world_agent"},
         "worker_node_url": "http://localhost:7001",
-        "agent_config": {}
+        "agent_config": {
+            "llm_config": {"config_name": "model_1"}
+        }
     }
 ]
