@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
+import logging
 from hello_world_agent.schemas import InputSchema
-from naptha_sdk.utils import get_logger
 
-logger = get_logger(__name__)
+
+logger = logging.getLogger(__name__)
+
 
 def run(inputs: InputSchema, *args, **kwargs):
     logger.info(f"Running module with inputs {inputs}")
