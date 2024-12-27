@@ -8,9 +8,9 @@ from naptha_sdk.schemas import AgentRunInput
 logger = logging.getLogger(__name__)
 
 
-def run(agent_run: AgentRunInput, *args, **kwargs):
-    logger.info(f"Running module with inputs {agent_run}")
-    return f"Hello {agent_run.inputs.firstname} {agent_run.inputs.surname}"
+def run(module_run: AgentRunInput, *args, **kwargs):
+    logger.info(f"Running module with inputs {module_run}")
+    return f"Hello {module_run.inputs.firstname} {module_run.inputs.surname}"
 
 if __name__ == "__main__":
     inputs = InputSchema(
