@@ -9,7 +9,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.10,<=3.13"
 pydantic = "^2.6.1"
 naptha-sdk = {git = "https://github.com/NapthaAI/naptha-sdk.git"}
 
