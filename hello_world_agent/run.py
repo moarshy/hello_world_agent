@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
 import logging
+from typing import Dict
 from hello_world_agent.schemas import InputSchema
 from naptha_sdk.schemas import AgentRunInput
-from typing import Dict
+from naptha_sdk.user import sign_consumer_id
 
 logger = logging.getLogger(__name__)
 
@@ -27,11 +28,12 @@ if __name__ == "__main__":
         "firstname": "sam",
         "surname": "altman",
     }
-    
+
     module_run = {
         "inputs": input_params,
         "deployment": deployment,
         "consumer_id": naptha.user.id,
+        "signature": sign_consumer_id(naptha.user.id, os.getenv("PRIVATE_KEY"))
     }
 
     response = run(module_run)
