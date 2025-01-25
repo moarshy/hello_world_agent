@@ -5,7 +5,7 @@ description = ""
 authors = ["moarshy <marshath@gmail.com>"]
 readme = "README.md"
 packages = [
-    { include = "hello_world_agent", from = "." },
+    { include = "hello_world_agentxx", from = "." },
 ]
 
 [tool.poetry.dependencies]
