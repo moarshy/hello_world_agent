@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import os
 import logging
 from typing import Dict
 from hello_world_agent.schemas import InputSchema
@@ -10,6 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 def run(module_run: Dict, *args, **kwargs):
+    logger.info(f"SERPER_API_KEY: {os.getenv('SERPER_API_KEY')}")
     module_run = AgentRunInput(**module_run)
     module_run.inputs = InputSchema(**module_run.inputs)
     return f"Hello {module_run.inputs.firstname} {module_run.inputs.surname}"
