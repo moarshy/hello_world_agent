@@ -13,7 +13,7 @@ def run(module_run: Dict, *args, **kwargs):
     logger.info(f"SERPER_API_KEY: {os.getenv('SERPER_API_KEY')}")
     module_run = AgentRunInput(**module_run)
     module_run.inputs = InputSchema(**module_run.inputs)
-    return f"Hello {module_run.inputs.firstname} {module_run.inputs.surname} from v0.1"
+    return f"Hello {module_run.inputs.firstname} {module_run.inputs.surname} from v0.2 :) :)"
 
 if __name__ == "__main__":
     import asyncio
