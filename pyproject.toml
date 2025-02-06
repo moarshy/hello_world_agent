@@ -12,6 +12,7 @@ packages = [
 python = ">=3.10,<=3.13"
 pydantic = "^2.6.1"
 naptha-sdk = {git = "https://github.com/NapthaAI/naptha-sdk.git"}
+numpy = "2.0.0"
 
 [build-system]
 requires = ["poetry-core"]
