@@ -2,7 +2,6 @@
 import os
 import logging
 from typing import Dict
-import numpy as np
 from hello_world_agent.schemas import InputSchema
 from naptha_sdk.schemas import AgentRunInput
 from naptha_sdk.user import sign_consumer_id
@@ -11,10 +10,9 @@ logger = logging.getLogger(__name__)
 
 
 def run(module_run: Dict, *args, **kwargs):
-    logger.info(f"SERPER_API_KEY: {os.getenv('SERPER_API_KEY')}")
     module_run = AgentRunInput(**module_run)
     module_run.inputs = InputSchema(**module_run.inputs)
-    return f"Hello {module_run.inputs.firstname} {module_run.inputs.surname} from v0.2. Numpy version: {np.__version__}"
+    return f"Hello {module_run.inputs.firstname} {module_run.inputs.surname}"
 
 if __name__ == "__main__":
     import asyncio

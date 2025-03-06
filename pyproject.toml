@@ -1,19 +1,21 @@
-[tool.poetry]
-name = "hello-world-agent"
+[project]
+name = "hello_world_agent"
 version = "0.1.0"
-description = ""
-authors = ["moarshy <marshath@gmail.com>"]
+description = "A simple hello world agent for naptha node"
 readme = "README.md"
-packages = [
-    { include = "hello_world_agent", from = "." },
+requires-python = ">=3.10"
+dependencies = [
+    "naptha-sdk",
+    "pydantic>=2.10.6",
 ]
 
-[tool.poetry.dependencies]
-python = ">=3.10,<=3.13"
-pydantic = "^2.6.1"
-naptha-sdk = {git = "https://github.com/NapthaAI/naptha-sdk.git"}
-numpy = "2.2.2"
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hello_world_agent*"]
+
+[tool.uv.sources]
+naptha-sdk = { git = "https://github.com/NapthaAI/naptha-sdk.git" }
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
